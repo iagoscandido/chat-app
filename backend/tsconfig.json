@@ -1,0 +1,47 @@
+{
+  "$schema": "https://www.schemastore.org/tsconfig",
+  "_version": "24.0.0",
+
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    "lib": [
+      "es2024",
+      "ESNext.Array",
+      "ESNext.Collection",
+      "ESNext.Error",
+      "ESNext.Iterator",
+      "ESNext.Promise"
+    ],
+    //  Enviroment Settings
+    "module": "esnext",
+    "target": "es2024",
+
+    "types": ["node"],
+
+    // Other outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "extends": "@tsconfig/node-lts/tsconfig.json",
+  "include": ["src", "types"],
+  "exclude": ["node_modules", "dist", "drizzle"]
+}
